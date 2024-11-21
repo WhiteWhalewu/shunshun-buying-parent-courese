@@ -25,6 +25,15 @@
 
     <properties>
         <spring.boot.version>2.1.1.RELEASE</spring.boot.version>
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <knife4j.version>2.0.4</knife4j.version>
+        <lombok.version>1.18.4</lombok.version>
+        <fastjson.version>1.2.76</fastjson.version>
+        <mysql.version>8.0.23</mysql.version>
+        <spring.druid.version>1.1.21</spring.druid.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <httpclient.version>4.5</httpclient.version>
+        <wxpay-sdk.version>0.0.3</wxpay-sdk.version>
     </properties>
 
     <dependencyManagement>
@@ -41,7 +50,79 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
             <!--  整合-第一部分-Web启动器-结束 -->
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <!--
+                1、knife4j- todo swagger文档增强工具knife4j
+                2、官网地址:https://doc.xiaominfo.com/
+                3、引入knife4j后会自动引入swagger相关依赖
+            -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <!--在引用时请在maven中央仓库搜索最新版本号-->
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>2.7.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${spring.druid.version}</version>
+            </dependency>
+
+            <!--
+                https://www.baomidou.com/
+                mybatis-plus
+            -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.wxpay</groupId>
+                <artifactId>wxpay-sdk</artifactId>
+                <version>${wxpay-sdk.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
